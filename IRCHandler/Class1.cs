@@ -162,6 +162,10 @@ namespace IRCHandler
         {
             SendLine($"PRIVMSG {target} :{msg}");
         }
+        public void Notice(string target, string msg)
+        {
+            SendLine($"NOTICE {target} :{msg}");
+        }
         public void Join(string channel)
         {
             SendLine($"JOIN {channel}");
